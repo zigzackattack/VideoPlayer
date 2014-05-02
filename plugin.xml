@@ -18,7 +18,7 @@
 	<!-- android -->
 	<platform name="android">
 		<source-file src="src/android/VideoPlayer.java" target-dir="src/com/phonegap/plugins/videoplayer" />
-		<source-file src="src/android/ExpansionFile.java" target-dir="src/com/phonegap/plugins/videoplayer" />
+		<source-file src="src/android/ExpansionStorage.java" target-dir="src/com/phonegap/plugins/videoplayer" />
 
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="VideoPlayer">

@@ -99,7 +99,7 @@ public class VideoPlayer extends CordovaPlugin {
 			intent = new Intent(Intent.ACTION_VIEW);
 			intent.setDataAndType(uri, "video/*");
 		} else if(ExpansionStorage.isExpansionFile(uri)) {
-			String filepath = uri.replace("expansion://assets/", "");
+			String filepath = uri.toString().replace("expansion://assets/", "");
 
 			// get actual filename from path as command to write to internal storage doesn't like folders
 			String filename = filepath.substring(filepath.lastIndexOf("/")+1, filepath.length());
@@ -128,7 +128,7 @@ public class VideoPlayer extends CordovaPlugin {
 	private void copyExpansion(String fileFrom, String fileTo) throws IOException {
 		// get file to be copied from assets
 		ExpansionStorage store = new ExpansionStorage(this.cordova.getActivity());
-		AssetFileDescriptor fd = store.load(uri);	
+		AssetFileDescriptor fd = store.load(uri.toString());	
 		InputStream in = fd.createInputStream();
 		// get file where copied too, in internal storage.
 		// must be MODE_WORLD_READABLE or Android can't play it

@@ -27,8 +27,6 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 
-import org.apache.cordova.media.ExpansionStore;
-
 public class VideoPlayer extends CordovaPlugin {
 	private static final String YOU_TUBE = "youtube.com";
 	private static final String ASSETS = "file:///android_asset/";

@@ -57,7 +57,7 @@ class ExpansionStorage {
   }
 
   public static Boolean isExpansionFile(Uri file) {
-		return (uri.getScheme() == "expansion");
+		return (file.getScheme() == "expansion");
   }
 
 }

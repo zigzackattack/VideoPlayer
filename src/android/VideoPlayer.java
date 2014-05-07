@@ -128,7 +128,7 @@ public class VideoPlayer extends CordovaPlugin {
 	private void copyExpansion(String fileFrom, String fileTo) throws IOException {
 		// get file to be copied from assets
 		ExpansionStorage store = new ExpansionStorage(this.cordova.getActivity());
-		AssetFileDescriptor fd = store.load(uri.toString());	
+		AssetFileDescriptor fd = store.load(fileFrom);	
 		InputStream in = fd.createInputStream();
 		// get file where copied too, in internal storage.
 		// must be MODE_WORLD_READABLE or Android can't play it

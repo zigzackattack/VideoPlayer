@@ -97,7 +97,7 @@ public class VideoPlayer extends CordovaPlugin {
 			// Display video player
 			intent = new Intent(Intent.ACTION_VIEW);
 			intent.setDataAndType(uri, "video/*");
-		} else if(ExpansionStore.isExpansionFile(uri)) {
+		} else if(ExpansionStorage.isExpansionFile(uri)) {
 			String filepath = uri.replace("expansion://assets/", "");
 
 			// get actual filename from path as command to write to internal storage doesn't like folders

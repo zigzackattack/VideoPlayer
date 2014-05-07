@@ -4,6 +4,7 @@ import java.io.InputStream;
 import com.android.vending.expansion.zipfile.*;
 import android.content.res.AssetFileDescriptor;
 import android.content.Context;
+import android.net.Uri;
 import java.io.IOException;
 
 import android.util.Log;
@@ -53,6 +54,10 @@ class ExpansionStorage {
 
   public static Boolean isExpansionFile(String file) {
     return file.startsWith(PROTOCOL);
+  }
+
+  public static Boolean isExpansionFile(Uri file) {
+		return (uri.getScheme() == "expansion");
   }
 
 }
